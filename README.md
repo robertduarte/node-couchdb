@@ -11,13 +11,13 @@ A thin node.js idiom based module for [CouchDB's REST API](http://wiki.apache.or
 
 Installation is simple from [NPM](http://npmjs.org/):
 
-    $ npm install felix-couchdb
+    $ npm install robert-couchdb
 
 To use the library, create a new file called `my-couch-adventure.js`:
 
     var
       util = require('util'),
-      couchdb = require('felix-couchdb'),
+      couchdb = require('robert-couchdb'),
       client = couchdb.createClient(5984, 'localhost'),
       db = client.db('my-db');
 
@@ -97,7 +97,7 @@ Takes the path of a `file` and callback receives a JS object suitable for inline
 
 Check `lib/dep/mime.js` for a list of recognized file types.
 
-### couchdb.createClient([port, host, user, pass, maxListeners, secure])
+### couchdb.createClient([port, host, user, pass, maxListeners, secure, urlContextPath])
 
 Creates a new `couchdb.Client` for a given `port` (default: `5984`) and `host` (default: `'localhost'`). This client will queue all requests that are send through it, so ordering of requests is always guaranteed. Use multiple clients for parallel operations.
 
@@ -108,7 +108,7 @@ Default Node.js value for this == 11 listeners; if `maxListeners` == 0 then warn
 
 If the optional `secure` is supplied as true, then the https transport is used. Note that https is usually serviced on port 443. This is useful when using cloud-based CouchDB services such as Cloudant where their API is hosted on a https platform e.g.
 
-      client = couchdb.createClient(443, 'username.cloudant.com','username','password',0,true),
+      client = couchdb.createClient(443, 'username.cloudant.com','username','password',0,true,'/sync'),
       
 ### client.host
 

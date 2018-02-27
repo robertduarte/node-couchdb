@@ -1,8 +1,8 @@
 {
-  "name": "felix-couchdb",
+  "name": "robert-couchdb",
   "version": "1.0.8",
-  "author": "Alexey Makarov <alexey@norlin.ru>",
-  "description": "A CouchDB module following node.js idioms, created by Felix Geisendörfer <felix@debuggable.com> and fixed a little by me",
+  "author": "Robert Duarte <robert@robertduarte.com>",
+  "description": "A CouchDB module following node.js idioms, created by Robert Duarte <robert@robertduarte.com>, forked from Felix Geisendörfer <felix@debuggable.com> and fixed a little by me",
   "keywords": [
     "couch",
     "couchdb"
